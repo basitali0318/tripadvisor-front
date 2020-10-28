@@ -1,0 +1,170 @@
+main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+main nav {
+  margin-top: 20px;
+  display: flex;
+  font-size: 16px;
+  line-height: 20px;
+  justify-content: space-between;
+}
+
+main nav > div:first-child {
+  margin: 0 0;
+}
+
+main nav > div:last-child {
+  margin: 0;
+}
+main nav > div {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 12px 17px;
+  flex: 1;
+  margin: 0 5px;
+  justify-content: space-between;
+  display: flex;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  max-width: 133px;
+}
+
+main nav > div > p {
+  margin-right: 3px;
+  font-family: "Trip Sans Reg";
+  font-weight: bold;
+}
+
+main nav > div:hover {
+  background-color: black;
+  color: white;
+}
+main .container {
+  width: 1280px;
+}
+
+.title {
+  color: var(--red);
+}
+
+/* BANNERS */
+
+.banners {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.left-image {
+  border-radius: 10px 0 0 10px;
+  width: 798px;
+  height: 430px;
+  object-fit: cover;
+  object-position: bottom;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-right: 2px;
+}
+
+.left-image:hover {
+  opacity: 0.7;
+}
+
+.right-image-1,
+.right-image-2 {
+  transition: all 0.2s ease;
+  width: 480px;
+  height: 214px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.right-image-1 {
+  border-radius: 0 10px 0 0;
+}
+
+.right-image-2 {
+  border-radius: 0 0 10px 0;
+}
+
+.right-image-1:hover,
+.right-image-2:hover {
+  opacity: 0.7;
+}
+
+/* TRANSITION */
+
+.visit-Paris {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 14.4px;
+  margin-top: 15px;
+  font-family: "Trip Sans Reg";
+}
+
+/* ORGANIZE YOUR TRIP SECTION */
+
+.organize {
+  display: flex;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.organize-left h2 {
+  font-size: 32px;
+  line-height: 38.4px;
+  letter-spacing: 0.6px;
+  font-family: "Trip Sans VF";
+}
+
+.organize button {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.organize-right > div {
+  background-color: var(--red);
+  border-radius: 15px 15px 0 0;
+  z-index: 10;
+  padding-left: 30px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.organize-right h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.organize-right p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 30px;
+  margin-top: 10px;
+  font-family: "Trip Sans Reg";
+}
+
+.organize-left p {
+  margin-top: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "georgia";
+  color: #474747;
+}
+.organize-left {
+  margin-right: 100px;
+}
+
+.organize img {
+  width: 525px;
+  height: 284px;
+  margin-top: -80px;
+  border-radius: 0 0 15px 15px;
+}

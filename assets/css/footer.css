@@ -1,0 +1,17 @@
+footer {
+  margin-top: 100px;
+  height: 150px;
+  background-color: #faf1ed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer i {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+footer i:hover {
+  color: var(--greyHover);
+}
