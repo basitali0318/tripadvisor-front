@@ -109,9 +109,8 @@ header nav div {
 }
 
 header nav div i {
-  font-weight: bold;
-  font-size: 18px;
-  margin-right: 7px;
+  font-size: 23px;
+  margin-right: 4px;
 }
 
 header nav div:hover {
@@ -125,6 +124,7 @@ main {
   display: flex;
   justify-content: center;
 }
+
 main nav {
   margin-top: 20px;
   display: flex;
@@ -153,6 +153,10 @@ main nav > div {
   transition: all 0.2s ease;
   cursor: pointer;
   max-width: 133px;
+}
+
+main nav > div i {
+  font-size: 23px;
 }
 
 main nav > div > p {
@@ -431,10 +435,8 @@ main .container {
 
 /* Icons Font Awesome */
 
-.carrousel .fa-circle {
+.carrousel .icon-bubble_rating_full_refresh {
   color: #19a160;
-  margin-right: 2px;
-  font-size: 13px;
 }
 
 .favorite {
@@ -476,19 +478,20 @@ main .container {
   font-weight: 900;
   color: var(--red);
 }
-.carrousel .fa-arrow-right {
+.carrousel .icon-arrow_right {
   position: absolute;
   background-color: white;
-  font-size: 18px;
+  font-size: 21px;
   top: 45%;
   right: -7px;
   padding: 10px;
   border-radius: 50%;
   border: 2px solid black;
   transition: 0.4s all ease;
+  cursor: pointer;
 }
 
-.carrousel .fa-arrow-right:hover {
+.carrousel .icon-arrow_right:hover {
   background-color: black;
   color: white;
 }
@@ -526,9 +529,10 @@ main .container {
   text-align: center;
 }
 
-.guide-articles .fa-heart {
+.guide-articles .icon-heart_fill {
   color: var(--red);
   margin-top: 25px;
+  font-size: 20px;
 }
 
 .guide-articles > div > img:first-child {
@@ -653,7 +657,7 @@ main .container {
   font-family: "Trip Sans Reg";
 }
 
-/* BEST OF PARIS SECTION */
+/* === BEST OF PARIS SECTION === */
 
 .choice-paris {
   margin-top: 80px;
@@ -671,7 +675,7 @@ main .container {
   margin-right: 16px;
 }
 
-.choice-paris .carrousel .fa-arrow-right {
+.choice-paris .carrousel .icon-arrow_right {
   right: -20px;
 }
 
@@ -690,22 +694,27 @@ main .container {
   margin-bottom: -20px;
 }
 
-/* FOOTER SECTION STYLE  */
+/* === FOOTER SECTION === */
 
 footer {
   margin-top: 100px;
   height: 150px;
   background-color: #faf1ed;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-footer i {
-  font-size: 24px;
-  margin: 0 10px;
+.github a {
+  text-decoration: none;
 }
 
-footer i:hover {
-  color: var(--greyHover);
+.github a::before {
+  margin-left: 18px;
+  content: "\f126";
+  font-family: "Font Awesome 5 Free";
+  font-size: 21px;
+  font-weight: 900;
+  color: black;
 }
