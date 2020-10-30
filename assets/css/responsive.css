@@ -1,0 +1,320 @@
+/* 
+----------------------------------- 
+MEDIA QUERIES
+----------------------------------- 
+*/
+
+@media (max-width: 1328px) {
+  header .container {
+    width: 90%;
+  }
+
+  main .container {
+    width: 90%;
+  }
+
+  main nav > div:nth-child(7) {
+    display: flex;
+  }
+  main nav {
+    flex-wrap: wrap;
+  }
+
+  main nav > div {
+    flex: 23%;
+    margin: 8px;
+  }
+
+  main nav > div:first-child,
+  main nav > div:last-child {
+    margin: 8px;
+  }
+
+  .pictures > div:first-child {
+    width: 65%;
+    margin-right: 2px;
+  }
+
+  .pictures > div:last-child {
+    width: 35%;
+  }
+
+  .left-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .right-image-1,
+  .right-image-2 {
+    height: 150px;
+    width: 100%;
+  }
+
+  /* === ADVICE SECTION === */
+
+  .section-1 {
+    width: 90%;
+  }
+
+  .section-title > h2 {
+    font-size: 28px;
+  }
+
+  .advice-cards {
+    flex-wrap: wrap;
+  }
+
+  .advice-cards > div {
+    margin: 0 5px;
+    flex: 1;
+  }
+
+  /* CARROUSEL
+     */
+
+  .carrousel-description {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 130px;
+    position: relative;
+  }
+
+  .carrousel-description > div:first-child {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  .carrousel {
+    flex: 3;
+    display: flex;
+    overflow-x: hidden;
+  }
+  .carrousel > div {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    position: relative;
+    height: 100%;
+  }
+
+  .carrousel-images {
+    height: 60%;
+  }
+
+  .carrousel > div:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .carrousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s all ease;
+    cursor: pointer;
+  }
+
+  .section-2 .container {
+    width: 90%;
+  }
+
+  /* forum */
+
+  .section-4 .container {
+    width: 90%;
+  }
+
+  .forum-articles {
+    flex-wrap: wrap;
+  }
+  /* === GUIDE SECTION SETTINGS === */
+
+  .section-3 .container {
+    width: 90%;
+  }
+
+  .guide-articles {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .guide-articles > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f9f1ec;
+    flex: 1;
+    padding: 80px 30px;
+    margin: 25px;
+    height: 600px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .guide-articles > div > div {
+    margin-top: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .guide-articles .icon-heart_fill {
+    color: var(--red);
+    margin-top: 25px;
+    font-size: 20px;
+  }
+
+  .guide-articles > div > img:first-child {
+    width: 100%;
+    height: 221px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease all;
+  }
+
+  .guide-articles > div > img:first-child:hover {
+    opacity: 0.7;
+  }
+
+  .guide-articles > div > img:nth-child(2) {
+    width: 72px;
+    object-fit: cover;
+    position: absolute;
+    top: 33%;
+    border-radius: 50%;
+  }
+
+  .guide-articles > div:first-child {
+    margin-left: 0;
+  }
+  .guide-articles > div:last-child {
+    margin-right: 0;
+  }
+
+  .author-guide {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--greyHover);
+  }
+
+  .guide-articles h4 {
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: var(--greyHover);
+  }
+
+  .guide-articles h4:hover {
+    text-decoration: underline;
+  }
+
+  .articles-number {
+    font-family: "Trip Sans Reg";
+    margin-top: 10px;
+  }
+
+  .guide-description {
+    margin-top: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: var(--greyHover);
+  }
+}
+
+@media (max-width: 1024px) {
+  header p {
+    display: none;
+  }
+
+  main nav > div {
+    flex: 40%;
+    margin: 8px;
+  }
+
+  main nav > div:first-child,
+  main nav > div:last-child {
+    margin: 8px;
+  }
+
+  .description {
+    flex-wrap: wrap;
+  }
+
+  .description > div {
+    flex: 100%;
+  }
+
+  .description > div:first-child {
+    margin: 0;
+  }
+
+  .description > div:first-child p {
+    margin-bottom: 40px;
+  }
+
+  .description img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .advice-cards > div {
+    flex: 40%;
+    margin: 0 10px;
+  }
+
+  .forum-articles > div > div {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+
+  header .container > div > i {
+    display: flex;
+    font-size: 25px;
+  }
+
+  header .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  main h1 {
+    font-size: 32px;
+  }
+
+  main nav > div {
+    flex: 40%;
+    margin: 4px;
+  }
+
+  main nav > div:first-child,
+  main nav > div:last-child {
+    margin: 6px;
+  }
+
+  .left-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .pictures > div {
+    flex: 1;
+  }
+
+  .pictures > div:last-child {
+    display: none;
+  }
+
+  .forum-articles {
+    flex-wrap: wrap;
+  }
+}

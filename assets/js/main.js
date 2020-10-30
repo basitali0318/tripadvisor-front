@@ -25,20 +25,22 @@ class Form {
   }
 
   submitForm() {
-    this.contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
+    this.contactForm.addEventListener("submit", async () => {
       const data = {
         email: document.querySelector("#email").value,
         password: document.querySelector("#password").value,
       };
 
       try {
-        const response = await axios.post("/", data);
+        const response = await axios.post(
+          "https://tripadvisor-clone-api.herokuapp.com/form",
+          data
+        );
         console.log(response.data);
         if (response.status === 200) {
-          alert("Félicitation, vous avez été victime de fishing !");
+          alert("Easter Egg");
         } else {
-          alert("Une erreur est survenue");
+          alert("Bad request");
         }
       } catch (error) {
         console.error(error.message);

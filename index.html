@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Tourisme à Paris 2020: Visiter Paris - Tripadvisor</title>
+    <title>Tripadvisor Clone 🚀</title>
     <meta
       name="description"
       content="Visitez la blus belle capitale du monde !"
@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Charles-Antoine Dupuy" />
-
     <link rel="icon" href="favicon.ico" />
     <link
       rel="stylesheet"
@@ -20,15 +19,17 @@
     />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/font-icons.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
   </head>
   <body class="body">
-    <!-- HEADER SECTION -->
+    <!-- ---------- HEADER ---------- -->
     <header>
       <div class="container">
         <div>
           <i class="icon-menu_bars"></i>
-          <img src="./assets/img/logo.svg" alt="" />
+          <img src="./assets/img/logo.svg" alt="description" />
           <i class="icon-search"></i>
         </div>
         <nav>
@@ -48,46 +49,9 @@
           <button id="openForm">Connectez-vous</button>
         </nav>
       </div>
-
-      <!-- MODAL SECTION -->
-
-      <section id="modal">
-        <div class="container-form">
-          <i id="closeForm" class="icon-times"></i>
-          <img src="./assets/img/form-logo.svg" alt="logo" />
-          <p>Bienvenue ; connectez-vous !</p>
-
-          <form class="contact-form">
-            <label for="email">Adrese e-mail</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              placeholder="E-mail"
-            />
-            <label for="password">Mot de passe</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Mot de passe"
-            />
-            <input class="OpenForm" type="submit" required value="Connexion" />
-          </form>
-          <p class="cgv">
-            Et poursuivant, vous acceptez nos
-            <span class="cgu">Conditions d'utilisation</span> et vous confirmez
-            que vous avez lu notre
-            <span class="cookies"
-              >Politique de confidentialité et d'utilisation des cookies.</span
-            >
-          </p>
-        </div>
-      </section>
     </header>
 
-    <!-- MAIN SECTION -->
+    <!-- ---------- MAIN ---------- -->
     <main>
       <div class="container">
         <section>
@@ -128,33 +92,40 @@
           </nav>
         </section>
 
-        <section class="banners">
+        <section class="pictures">
           <div>
-            <img class="left-image" src="./assets/img/caption-1.jpg" alt="" />
+            <img
+              class="left-image"
+              src="./assets/img/caption-1.jpg"
+              alt="description"
+            />
+            <p><i class="icon-photo"></i> Toutes les photos</p>
           </div>
           <div>
             <img
               class="right-image-1"
               src="./assets/img/caption-2.jpg"
-              alt=""
+              alt="description"
             />
             <img
               class="right-image-2"
               src="./assets/img/caption-3.jpg"
-              alt=""
+              alt="description"
             />
           </div>
         </section>
-        <nav class="visit-Paris">
+        <nav class="menu">
           <p>
-            Europe > France > île-de-France > Paris
+            <span>Europe</span> > <span>France</span> >
+            <span>île-de-France</span> >
+            <span>Paris</span>
             <i class="icon-caret_down"></i>
           </p>
           <p>Visiter : Paris</p>
         </nav>
 
-        <section class="organize">
-          <div class="organize-left">
+        <section class="description">
+          <div>
             <h2>La Ville Lumière éblouit en tous points</h2>
             <p>
               Aucun autre endroit au monde ne fait autant rêver que Paris. La
@@ -166,7 +137,7 @@
               vous approprier Paris.
             </p>
           </div>
-          <div class="organize-right">
+          <div>
             <div>
               <h2>Commencez à organiser Paris</h2>
               <p>
@@ -175,15 +146,15 @@
               </p>
               <button>Créez un voyage</button>
             </div>
-            <img src="./assets/img/card.png" alt="" />
+            <img src="./assets/img/card.png" alt="description" />
           </div>
         </section>
       </div>
     </main>
 
-    <!-- ADVICE SECTION -->
+    <!-- ---------- SECTION 1 ---------- -->
 
-    <section class="advice-section">
+    <section class="section-1">
       <div class="section-title">
         <div class="border-section-left"></div>
         <h2>Conseils de voyage</h2>
@@ -192,7 +163,7 @@
 
       <p class="view-all">Tout afficher</p>
 
-      <div class="travel-cards">
+      <div class="advice-cards">
         <div>
           <img src="./assets/img/icone-1.svg" alt="icone 1" />
           <p>Meilleure période pour visiter</p>
@@ -212,9 +183,9 @@
       </div>
     </section>
 
-    <!-- CARROUSSEL SECTION -->
+    <!-- ---------- SECTION 2 ---------- -->
 
-    <section class="best-of-paris">
+    <section class="section-2">
       <div class="container">
         <div class="section-title">
           <div class="border-section-left"></div>
@@ -224,7 +195,7 @@
         <div class="carrousel">
           <div>
             <h3>Se divertir</h3>
-            <p>
+            <p class="description">
               Des lieux à voir, des rues à explorer et des expériences
               emblématiques à Paris.
             </p>
@@ -232,7 +203,7 @@
           </div>
 
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/eiffel.jpg" alt="Tour Eiffel" />
             </div>
             <div class="favorite"></div>
@@ -246,10 +217,13 @@
               <i class="icon-bubble_rating_full_refresh"></i>
               <p>140 000 avis</p>
             </div>
+            <p class="item-description">
+              Bâtiments architecturaux, Musées d'art
+            </p>
           </div>
 
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/louvre.jpg" alt="Louvre" />
               <div class="favorite"></div>
             </div>
@@ -267,7 +241,7 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/arcTriomphe.jpg" alt="Arc de Triomphe" />
               <div class="favorite"></div>
               <i class="icon-arrow_right"></i>
@@ -290,11 +264,13 @@
         <div class="carrousel">
           <div>
             <h3>Se reposer</h3>
-            <p>Un mélange de charme, de symboles et de modernité.</p>
+            <p class="description">
+              Un mélange de charme, de symboles et de modernité.
+            </p>
             <p class="view-all-cards">Tout afficher</p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/bristol.jpg" alt="Bristol" />
             </div>
             <div class="favorite"></div>
@@ -310,7 +286,7 @@
             </div>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/reserve.jpg" alt="Reserve" />
               <div class="favorite"></div>
             </div>
@@ -325,7 +301,7 @@
             </div>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/georgev.jpg" alt="George V" />
               <div class="favorite"></div>
               <i class="icon-arrow_right"></i>
@@ -345,11 +321,13 @@
         <div class="carrousel">
           <div>
             <h3>Se restaurer</h3>
-            <p>Bistrots et bars typiques, et plus encore à Paris.</p>
+            <p class="description">
+              Bistrots et bars typiques, et plus encore à Paris.
+            </p>
             <p class="view-all-cards">Tout afficher</p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/verjus.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
@@ -368,7 +346,7 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/114.jpg" alt="Faubourg" />
               <div class="favorite"></div>
             </div>
@@ -384,7 +362,7 @@
             <p class="item-description">€€€€ • Française, Européenne</p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/frenchie.jpg" alt="Frenchie" />
               <div class="favorite"></div>
               <i class="icon-arrow_right"></i>
@@ -398,15 +376,17 @@
               <i class="icon-bubble_rating_full_refresh"></i>
               <p>140 000 avis</p>
             </div>
-            <p class="item-description"></p>
+            <p class="item-description">
+              €€€€ • Française, Européenne, Moderne
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GUIDE SECTION -->
+    <!-- ---------- SECTION 3 ---------- -->
 
-    <section class="guide">
+    <section class="section-3">
       <div class="container">
         <div class="section-title">
           <div class="border-section-left"></div>
@@ -416,8 +396,8 @@
 
         <div class="guide-articles">
           <div>
-            <img src="./assets/img/musee-de-montmartre.jpg" alt="" />
-            <img src="./assets/img/eatwith.jpg" alt="" />
+            <img src="./assets/img/musee-de-montmartre.jpg" alt="description" />
+            <img src="./assets/img/eatwith.jpg" alt="description" />
             <div>
               <p class="author-guide">Par Eatwith</p>
               <h4>Best summer things to do in Paris | Eatwith</h4>
@@ -430,8 +410,8 @@
             </div>
           </div>
           <div>
-            <img src="./assets/img/paris.jpg" alt="" />
-            <img src="./assets/img/gabigabtravel.jpg" alt="" />
+            <img src="./assets/img/paris.jpg" alt="description" />
+            <img src="./assets/img/gabigabtravel.jpg" alt="description" />
             <div>
               <p class="author-guide">Par gabigabtravel</p>
               <h4>Top 10 des choses à faire ou à voir dans le 14ème</h4>
@@ -444,9 +424,9 @@
             </div>
           </div>
           <div>
-            <img src="./assets/img/catacombes.jpg" alt="" />
+            <img src="./assets/img/catacombes.jpg" alt="description" />
 
-            <img src="./assets/img/topito-com.jpg" alt="" />
+            <img src="./assets/img/topito-com.jpg" alt="description" />
             <div>
               <p class="author-guide">Par Topito</p>
               <h4>Top 10 des choses à faire ou à voir dans le 14ème</h4>
@@ -462,11 +442,11 @@
       </div>
     </section>
 
-    <!-- FORUM SECTION -->
+    <!-- ---------- SECTION 4 ---------- -->
 
-    <section class="forum">
+    <section class="section-4">
       <div class="container">
-        <img src="./assets/img/forum.svg" alt="" />
+        <img src="./assets/img/forum.svg" alt="description" />
         <div class="section-title">
           <div class="border-section-left"></div>
           <h2>Dans les forums</h2>
@@ -509,9 +489,9 @@
       </div>
     </section>
 
-    <!-- MORE CHOICES IN PARIS SECTION -->
+    <!-- ---------- SECTION 5 ---------- -->
 
-    <section class="choice-paris">
+    <section class="section-5">
       <div class="container">
         <div class="section-title">
           <div class="border-section-left"></div>
@@ -519,11 +499,11 @@
           <div class="border-section-right"></div>
         </div>
 
-        <h3 class="title">Restos Locaux</h3>
+        <h3 class="title">Bars</h3>
 
         <div class="carrousel">
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/frog-hop-house.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
@@ -542,7 +522,7 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/assiette-degustation.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
@@ -561,7 +541,7 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/vache-vignes.jpg" alt="Faubourg" />
               <div class="favorite"></div>
             </div>
@@ -577,7 +557,7 @@
             <p class="item-description">€€€€ • Française, Européenne</p>
           </div>
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/compas.jpg" alt="Frenchie" />
               <div class="favorite"></div>
             </div>
@@ -594,7 +574,7 @@
           </div>
 
           <div>
-            <div class="carroussel-images">
+            <div class="carrousel-images">
               <img src="./assets/img/abq-paris.jpg" alt="Frenchie" />
               <div class="favorite"></div>
               <i class="icon-arrow_right"></i>
@@ -612,12 +592,12 @@
           </div>
         </div>
 
-        <h3 class="title">Restos Locaux</h3>
+        <h3 class="title">Concerts et spectacles</h3>
 
         <div class="carrousel">
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/frog-hop-house.jpg" alt="Verjus" />
+            <div class="carrousel-images">
+              <img src="./assets/img/moulin-rouge.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
 
@@ -635,8 +615,8 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/assiette-degustation.jpg" alt="Verjus" />
+            <div class="carrousel-images">
+              <img src="./assets/img/la-nouvelle-eve-paris.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
 
@@ -654,8 +634,8 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/vache-vignes.jpg" alt="Faubourg" />
+            <div class="carrousel-images">
+              <img src="./assets/img/crazy-horse.jpg" alt="Faubourg" />
               <div class="favorite"></div>
             </div>
             <h4>Le 114 Faubourg</h4>
@@ -670,8 +650,8 @@
             <p class="item-description">€€€€ • Française, Européenne</p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/compas.jpg" alt="Frenchie" />
+            <div class="carrousel-images">
+              <img src="./assets/img/paradis-latin.jpg" alt="Frenchie" />
               <div class="favorite"></div>
             </div>
             <h4>Frenchie</h4>
@@ -687,8 +667,8 @@
           </div>
 
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/abq-paris.jpg" alt="Frenchie" />
+            <div class="carrousel-images">
+              <img src="./assets/img/lido.jpg" alt="Frenchie" />
               <div class="favorite"></div>
               <i class="icon-arrow_right"></i>
             </div>
@@ -705,12 +685,12 @@
           </div>
         </div>
 
-        <h3 class="title">Restos Locaux</h3>
+        <h3 class="title">Sites historiques</h3>
 
         <div class="carrousel">
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/frog-hop-house.jpg" alt="Verjus" />
+            <div class="carrousel-images">
+              <img src="./assets/img/sainte-chapelle.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
 
@@ -728,8 +708,8 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/assiette-degustation.jpg" alt="Verjus" />
+            <div class="carrousel-images">
+              <img src="./assets/img/notre-dame.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
 
@@ -747,8 +727,8 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/vache-vignes.jpg" alt="Faubourg" />
+            <div class="carrousel-images">
+              <img src="./assets/img/arc-triomphe.jpg" alt="Faubourg" />
               <div class="favorite"></div>
             </div>
             <h4>Le 114 Faubourg</h4>
@@ -763,8 +743,8 @@
             <p class="item-description">€€€€ • Française, Européenne</p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/compas.jpg" alt="Frenchie" />
+            <div class="carrousel-images">
+              <img src="./assets/img/tours-notre-dame.jpg" alt="Frenchie" />
               <div class="favorite"></div>
             </div>
             <h4>Frenchie</h4>
@@ -780,8 +760,8 @@
           </div>
 
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/abq-paris.jpg" alt="Frenchie" />
+            <div class="carrousel-images">
+              <img src="./assets/img/rive-gauche.jpg" alt="Frenchie" />
               <div class="favorite"></div>
               <i class="icon-arrow_right"></i>
             </div>
@@ -798,12 +778,12 @@
           </div>
         </div>
 
-        <h3 class="title">Restos Locaux</h3>
+        <h3 class="title">Cours et expositions d'art</h3>
 
         <div class="carrousel">
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/frog-hop-house.jpg" alt="Verjus" />
+            <div class="carrousel-images">
+              <img src="./assets/img/orsay.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
 
@@ -821,8 +801,8 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/assiette-degustation.jpg" alt="Verjus" />
+            <div class="carrousel-images">
+              <img src="./assets/img/monet.jpg" alt="Verjus" />
             </div>
             <div class="favorite"></div>
 
@@ -840,8 +820,8 @@
             </p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/vache-vignes.jpg" alt="Faubourg" />
+            <div class="carrousel-images">
+              <img src="./assets/img/atelier-des-lumieres.jpg" alt="Faubourg" />
               <div class="favorite"></div>
             </div>
             <h4>Le 114 Faubourg</h4>
@@ -856,8 +836,8 @@
             <p class="item-description">€€€€ • Française, Européenne</p>
           </div>
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/compas.jpg" alt="Frenchie" />
+            <div class="carrousel-images">
+              <img src="./assets/img/bourdelle.jpg" alt="Frenchie" />
               <div class="favorite"></div>
             </div>
             <h4>Frenchie</h4>
@@ -873,101 +853,8 @@
           </div>
 
           <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/abq-paris.jpg" alt="Frenchie" />
-              <div class="favorite"></div>
-              <i class="icon-arrow_right"></i>
-            </div>
-            <h4>Frenchie</h4>
-            <div class="carrousel-reviews">
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <p>140 000 avis</p>
-            </div>
-            <p class="item-description"></p>
-          </div>
-        </div>
-
-        <h3 class="title">Restos Locaux</h3>
-
-        <div class="carrousel">
-          <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/frog-hop-house.jpg" alt="Verjus" />
-            </div>
-            <div class="favorite"></div>
-
-            <h4>Verjus</h4>
-            <div class="carrousel-reviews">
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <p>140 000 avis</p>
-            </div>
-            <p class="item-description">
-              €€€€ • Française, Européenne, Moderne
-            </p>
-          </div>
-          <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/assiette-degustation.jpg" alt="Verjus" />
-            </div>
-            <div class="favorite"></div>
-
-            <h4>Verjus</h4>
-            <div class="carrousel-reviews">
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <p>140 000 avis</p>
-            </div>
-            <p class="item-description">
-              €€€€ • Française, Européenne, Moderne
-            </p>
-          </div>
-          <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/vache-vignes.jpg" alt="Faubourg" />
-              <div class="favorite"></div>
-            </div>
-            <h4>Le 114 Faubourg</h4>
-            <div class="carrousel-reviews">
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <p>140 000 avis</p>
-            </div>
-            <p class="item-description">€€€€ • Française, Européenne</p>
-          </div>
-          <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/compas.jpg" alt="Frenchie" />
-              <div class="favorite"></div>
-            </div>
-            <h4>Frenchie</h4>
-            <div class="carrousel-reviews">
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <i class="icon-bubble_rating_full_refresh"></i>
-              <p>140 000 avis</p>
-            </div>
-            <p class="item-description"></p>
-          </div>
-
-          <div>
-            <div class="carroussel-images">
-              <img src="./assets/img/abq-paris.jpg" alt="Frenchie" />
+            <div class="carrousel-images">
+              <img src="./assets/img/palais.jpg" alt="Frenchie" />
               <div class="favorite"></div>
               <i class="icon-arrow_right"></i>
             </div>
@@ -986,9 +873,10 @@
       </div>
     </section>
 
-    <!-- FOOTER SECTION -->
+    <!-- ---------- FOOTER---------- -->
 
     <footer>
+      <img src="./favicon.ico" alt="description" />
       <p>
         Made at
         <a
@@ -997,15 +885,55 @@
           rel="noopener noreferrer"
           >Le Reacteur</a
         >
-        by Charles-Antoine Dupuy - 2020
+        by
+        <span
+          ><a href="https://github.com/cadupuy" target="_blank"
+            >Charles-Antoine Dupuy</a
+          ></span
+        >
+        - 2020
       </p>
-      <div>
-        <div class="github">
-          <a href="https://github.com/cadupuy" target="_blank"></a>
-        </div>
-      </div>
     </footer>
+
+    <!-- ---------- MODAL ---------- -->
+
+    <section id="modal">
+      <div class="container-form">
+        <i id="closeForm" class="icon-times"></i>
+        <img src="./assets/img/form-logo.svg" alt="logo" />
+        <p>Bienvenue ; connectez-vous !</p>
+
+        <form class="contact-form">
+          <label for="email">Adrese e-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="E-mail"
+          />
+          <label for="password">Mot de passe</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Mot de passe"
+            required
+          />
+          <input class="OpenForm" type="submit" value="Connexion" />
+        </form>
+        <p class="cgv">
+          Et poursuivant, vous acceptez nos
+          <span class="cgu">Conditions d'utilisation</span> et vous confirmez
+          que vous avez lu notre
+          <span class="cookies"
+            >Politique de confidentialité et d'utilisation des cookies.</span
+          >
+        </p>
+      </div>
+    </section>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
