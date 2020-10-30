@@ -113,6 +113,114 @@ header nav div:hover {
   border: 2px solid black;
 }
 
+/* === HIDEN FORM SETTINGS === */
+
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+#modal img {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+input[type="email"],
+input[type="password"] {
+  margin-bottom: 20px;
+  padding: 15px 10px;
+  width: 320px;
+  outline: none;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+}
+form > p:last-child {
+  font-family: "Trip Sans Reg";
+  font-size: 10px;
+}
+
+.container-form > p {
+  font-family: "Trip Sans Reg";
+  margin-bottom: 30px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+input[type="submit"] {
+  border: none;
+  background-color: #000;
+  color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 19.8px;
+  padding: 13px 16px;
+  cursor: pointer;
+  outline: none;
+  width: 343px;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--greyHover);
+}
+
+.container-form {
+  position: relative;
+  width: 420px;
+  height: 530px;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 0 4px 0 black;
+}
+
+#closeForm {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.display {
+  display: flex !important;
+}
+
+.hide {
+  overflow: hidden;
+}
+
+.cgv {
+  font-size: 12px;
+  margin-top: 30px;
+  line-height: 16px;
+}
+
+.cookies,
+.cgu {
+  text-decoration: underline;
+  font-family: "Trip Sans Med";
+}
+
 /* === MAIN SETTINGS === */
 
 main {
@@ -512,8 +620,9 @@ main .container {
   flex: 1;
   padding: 80px 30px;
   margin: 25px;
-  height: 390px;
+  height: 550px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .guide-articles > div > div {
@@ -702,6 +811,10 @@ footer {
   width: 100%;
 }
 
+footer p {
+  margin: 0 20px;
+}
+
 .github a {
   text-decoration: none;
 }
@@ -781,83 +894,160 @@ footer {
     flex: 1;
   }
 
-  /* === CAROUSSEL SECTION SETTINGS === */
+  /* CARROUSEL
+   */
 
-  .best-of-paris .container {
-    width: 90%;
-  }
-
-  /* .carrousel {
+  .carrousel-description {
     display: flex;
     margin-top: 40px;
-    margin-bottom: 150px;
-  }
-
-  .carrousel div {
+    margin-bottom: 130px;
     position: relative;
-    flex: 1;
   }
 
-  .best-of-paris .carrousel img {
-    width: 307px;
-    height: 205px;
+  .carrousel-description > div:first-child {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  .carrousel {
+    flex: 3;
+    display: flex;
+    overflow-x: hidden;
+  }
+  .carrousel > div {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+    position: relative;
+    height: 100%;
+  }
+
+  .carroussel-images {
+    height: 60%;
+  }
+
+  .carrousel > div:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .carrousel img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: 0.4s all ease;
     cursor: pointer;
   }
 
-  .carrousel img:hover {
+  .best-of-paris .container {
+    width: 90%;
+  }
+
+  /* forum */
+
+  .forum .container {
+    width: 90%;
+  }
+
+  .forum-articles {
+    flex-wrap: wrap;
+  }
+  /* === GUIDE SECTION SETTINGS === */
+
+  .guide .container {
+    width: 90%;
+  }
+
+  .guide-articles {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .guide-articles > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f9f1ec;
+    flex: 1;
+    padding: 80px 30px;
+    margin: 25px;
+    height: 600px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  .guide-articles > div > div {
+    margin-top: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .guide-articles .icon-heart_fill {
+    color: var(--red);
+    margin-top: 25px;
+    font-size: 20px;
+  }
+
+  .guide-articles > div > img:first-child {
+    width: 100%;
+    height: 221px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease all;
+  }
+
+  .guide-articles > div > img:first-child:hover {
     opacity: 0.7;
   }
 
-  .carrousel h3 {
-    font-size: 32px;
-    line-height: 38.4px;
-    font-family: "Trip Sans Reg";
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-weight: bolder;
-    cursor: pointer;
+  .guide-articles > div > img:nth-child(2) {
+    width: 72px;
+    object-fit: cover;
+    position: absolute;
+    top: 33%;
+    border-radius: 50%;
   }
 
-  .carrousel h4 {
-    font-size: 18px;
+  .guide-articles > div:first-child {
+    margin-left: 0;
+  }
+  .guide-articles > div:last-child {
+    margin-right: 0;
+  }
+
+  .author-guide {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--greyHover);
+  }
+
+  .guide-articles h4 {
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: var(--greyHover);
+  }
+
+  .guide-articles h4:hover {
+    text-decoration: underline;
+  }
+
+  .articles-number {
+    font-family: "Trip Sans Reg";
     margin-top: 10px;
-    cursor: pointer;
   }
 
-  .carrousel .carrousel-reviews {
-    margin-top: 5px;
-    display: flex;
-    font-family: "Trip Sans Reg";
-    cursor: pointer;
-  }
-
-  .carrousel .carrousel-reviews p {
-    margin-left: 7px;
-    cursor: pointer;
-  }
-
-  .carrousel div:first-child > p {
+  .guide-description {
+    margin-top: 20px;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
     line-height: 21.6px;
     color: var(--greyHover);
-    font-weight: lighter;
-    margin-right: 25px;
-    margin-bottom: 15px;
   }
-
-  .view-all-cards {
-    font-size: 14px !important;
-    font-family: "Trip Sans Med" !important;
-  }
-
-  .item-description {
-    margin-top: 8px;
-    font-size: 14px !important;
-    font-family: "Trip Sans Reg" !important;
-  } */
 }
 
 @media (max-width: 1024px) {
@@ -899,6 +1089,10 @@ footer {
   .travel-cards > div {
     flex: 40%;
     margin: 0 10px;
+  }
+
+  .forum-articles > div > div {
+    margin-top: 120px;
   }
 }
 
@@ -943,5 +1137,9 @@ footer {
 
   .banners > div:last-child {
     display: none;
+  }
+
+  .forum-articles {
+    flex-wrap: wrap;
   }
 }
