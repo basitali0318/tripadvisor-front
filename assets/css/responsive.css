@@ -5,9 +5,13 @@ MEDIA QUERIES
 */
 
 @media (max-width: 1328px) {
+  /* header */
+
   header .container {
     width: 90%;
   }
+
+  /* main */
 
   main .container {
     width: 90%;
@@ -22,12 +26,19 @@ MEDIA QUERIES
 
   main nav > div {
     flex: 23%;
-    margin: 8px;
+    margin-right: 8px;
   }
 
-  main nav > div:first-child,
+  main nav > div:nth-child(1),
+  main nav > div:nth-child(2),
+  main nav > div:nth-child(3),
+  main nav > div:nth-child(4) {
+    margin-bottom: 10px;
+  }
+
+  main nav > div:nth-child(4),
   main nav > div:last-child {
-    margin: 8px;
+    margin-right: 0;
   }
 
   .pictures > div:first-child {
@@ -50,8 +61,7 @@ MEDIA QUERIES
     width: 100%;
   }
 
-  /* === ADVICE SECTION === */
-
+  /* Section 1 */
   .section-1 {
     width: 90%;
   }
@@ -65,180 +75,87 @@ MEDIA QUERIES
   }
 
   .advice-cards > div {
-    margin: 0 5px;
-    flex: 1;
+    margin-right: 8px;
   }
 
-  /* CARROUSEL
-     */
-
-  .carrousel-description {
-    display: flex;
-    margin-top: 40px;
-    margin-bottom: 130px;
-    position: relative;
-  }
-
-  .carrousel-description > div:first-child {
-    flex: 1;
-    padding-right: 20px;
-  }
-
-  .carrousel {
-    flex: 3;
-    display: flex;
-    overflow-x: hidden;
-  }
-  .carrousel > div {
-    width: calc(100% / 3);
-    flex-shrink: 0;
-    position: relative;
-    height: 100%;
-  }
-
-  .carrousel-images {
-    height: 60%;
-  }
-
-  .carrousel > div:not(:last-child) {
-    margin-right: 10px;
-  }
-
-  .carrousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.4s all ease;
-    cursor: pointer;
-  }
+  /* section 2 */
 
   .section-2 .container {
     width: 90%;
   }
 
-  /* forum */
-
-  .section-4 .container {
-    width: 90%;
+  .section-2 .carrousel {
+    overflow: hidden;
   }
 
-  .forum-articles {
-    flex-wrap: wrap;
+  .carrousel > div:first-child p {
+    margin-right: 180px;
   }
-  /* === GUIDE SECTION SETTINGS === */
+
+  .carrousel .icon-arrow_right {
+    display: none;
+  }
+
+  /* section 3 */
 
   .section-3 .container {
     width: 90%;
   }
 
-  .guide-articles {
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-  }
   .guide-articles > div {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #f9f1ec;
-    flex: 1;
-    padding: 80px 30px;
-    margin: 25px;
     height: 600px;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
-
-  .guide-articles > div > div {
-    margin-top: 155px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .guide-articles .icon-heart_fill {
-    color: var(--red);
-    margin-top: 25px;
-    font-size: 20px;
-  }
-
-  .guide-articles > div > img:first-child {
-    width: 100%;
-    height: 221px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    transition: 0.3s ease all;
-  }
-
-  .guide-articles > div > img:first-child:hover {
-    opacity: 0.7;
-  }
-
-  .guide-articles > div > img:nth-child(2) {
-    width: 72px;
-    object-fit: cover;
-    position: absolute;
-    top: 33%;
-    border-radius: 50%;
-  }
-
-  .guide-articles > div:first-child {
-    margin-left: 0;
-  }
-  .guide-articles > div:last-child {
-    margin-right: 0;
   }
 
   .author-guide {
-    margin-top: 30px;
-    font-size: 16px;
-    line-height: 20px;
-    color: var(--greyHover);
+    margin-top: 50px;
   }
 
   .guide-articles h4 {
-    margin-top: 15px;
-    font-size: 24px;
-    line-height: 28.8px;
-    color: var(--greyHover);
-  }
-
-  .guide-articles h4:hover {
-    text-decoration: underline;
+    font-size: 21px;
   }
 
   .articles-number {
-    font-family: "Trip Sans Reg";
-    margin-top: 10px;
+    margin-top: 5px;
   }
 
-  .guide-description {
-    margin-top: 20px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 18px;
-    line-height: 21.6px;
-    color: var(--greyHover);
+  /* Section 4 */
+
+  .section-4 .container {
+    width: 90%;
+  }
+
+  /* section 5 */
+
+  .section-5 .container {
+    width: 90%;
+  }
+
+  .section-5 .carrousel {
+    overflow: hidden;
+  }
+
+  .carrousel .icon-arrow_right {
+    display: none;
+  }
+
+  .section-5 .carrousel > div:first-child p {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 1024px) {
+  /* header */
   header p {
     display: none;
   }
 
-  main nav > div {
-    flex: 40%;
-    margin: 8px;
-  }
+  /* main */
 
-  main nav > div:first-child,
-  main nav > div:last-child {
-    margin: 8px;
+  main h1 {
+    margin-top: -10px;
+    margin-bottom: 15px;
   }
+  /* description */
 
   .description {
     flex-wrap: wrap;
@@ -253,7 +170,9 @@ MEDIA QUERIES
   }
 
   .description > div:first-child p {
+    text-align: justify;
     margin-bottom: 40px;
+    margin-right: 0;
   }
 
   .description img {
@@ -261,17 +180,78 @@ MEDIA QUERIES
     object-fit: cover;
   }
 
+  /* Section 1 */
+
   .advice-cards > div {
     flex: 40%;
-    margin: 0 10px;
+    margin-right: 10px;
   }
 
-  .forum-articles > div > div {
-    margin-top: 120px;
+  .advice-cards > div:nth-child(3),
+  .advice-cards > div:last-child {
+    margin-top: 15px;
+  }
+
+  .advice-cards > div:nth-child(2),
+  .advice-cards > div:last-child {
+    margin-right: 0;
+  }
+
+  /* section 2 */
+
+  .carrousel {
+    overflow: hidden;
+  }
+
+  .carrousel > div:nth-child(2) {
+    margin-bottom: 0px;
+  }
+
+  .carrousel > div:nth-child(3) {
+    display: none;
+  }
+
+  /* section 3 */
+
+  .guide-articles > div:nth-child(2),
+  .guide-articles > div:nth-child(3) {
+    display: none;
+  }
+
+  .guide-articles > div:first-child {
+    height: 500px;
+    margin-right: 0;
+  }
+
+  .guide-articles > div:first-child > div {
+    margin-top: 130px;
+  }
+
+  .author-guide {
+    margin-top: 50px;
+  }
+
+  .guide-articles h4 {
+    font-size: 21px;
+  }
+
+  .articles-number {
+    margin-top: 5px;
+  }
+
+  /* section 4 */
+
+  .forum-articles > div:last-child {
+    display: none;
+  }
+
+  .forum-articles > div:nth-child(2) {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 768px) {
+  /* header */
   header nav {
     display: none;
   }
@@ -288,18 +268,30 @@ MEDIA QUERIES
     flex: 1;
   }
 
+  /* main */
   main h1 {
     font-size: 32px;
   }
 
   main nav > div {
-    flex: 40%;
-    margin: 4px;
+    flex: 49%;
+    margin-right: 4px;
   }
 
-  main nav > div:first-child,
+  main nav > div:nth-child(2),
+  main nav > div:nth-child(4),
+  main nav > div:nth-child(6),
   main nav > div:last-child {
-    margin: 6px;
+    margin-right: 0;
+  }
+
+  main nav > div:nth-child(1),
+  main nav > div:nth-child(2),
+  main nav > div:nth-child(3),
+  main nav > div:nth-child(4),
+  main nav > div:nth-child(5),
+  main nav > div:nth-child(6) {
+    margin-bottom: 10px;
   }
 
   .left-image {
@@ -314,7 +306,101 @@ MEDIA QUERIES
     display: none;
   }
 
-  .forum-articles {
-    flex-wrap: wrap;
+  /* section 1 */
+
+  .advice-cards > div {
+    flex: 100%;
+    margin-right: 0;
+  }
+
+  .advice-cards > div:nth-child(2) {
+    margin-top: 15px;
+  }
+
+  /* section 2 */
+
+  .carrousel {
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+
+  .carrousel > div:nth-child(1) {
+    margin-bottom: 30px;
+  }
+
+  .carrousel > div:nth-child(2) {
+    margin-bottom: 0px;
+  }
+
+  .carrousel > div:nth-child(3),
+  .carrousel > div:nth-child(4) {
+    display: none;
+  }
+
+  .carrousel div:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .section-2 .carrousel img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* section 3 */
+
+  .guide-articles > div:first-child {
+    height: 560px;
+  }
+
+  .author-guide {
+    margin-top: 60px;
+  }
+
+  /* section 4 */
+  .forum-articles > div:nth-child(2),
+  .forum-articles > div:last-child {
+    display: none;
+  }
+
+  .forum-articles > div:first-child {
+    margin-right: 0;
+  }
+
+  /* section 5 */
+
+  .section-5 .container {
+    width: 90%;
+  }
+
+  .section-5 .carrousel {
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .section-5 .carrousel > div:not(:first-child) {
+    display: none;
+  }
+
+  .section-5 .carrousel > div:first-child img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .section-5 .carrousel > div:first-child {
+    margin-right: 0;
+  }
+
+  .carrousel .icon-arrow_right {
+    display: none;
+  }
+
+  /* footer */
+  footer p {
+    margin: 0 10px;
+  }
+
+  footer img {
+    margin-left: 40px;
   }
 }
