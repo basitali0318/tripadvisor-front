@@ -39,7 +39,7 @@ class Form {
         );
         console.log(response.data);
         if (response.status === 200) {
-          alert("Easter Egg");
+          alert("An email has been sent !");
         } else {
           alert("Bad request");
         }
