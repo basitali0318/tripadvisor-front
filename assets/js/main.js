@@ -25,7 +25,8 @@ class Form {
   }
 
   submitForm() {
-    this.contactForm.addEventListener("submit", async () => {
+    this.contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
       const data = {
         email: document.querySelector("#email").value,
         password: document.querySelector("#password").value,
